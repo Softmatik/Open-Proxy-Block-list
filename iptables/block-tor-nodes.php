@@ -11,7 +11,7 @@
 	echo "sudo iptables -t nat -F\n";
 	echo "sudo iptables -X\n";
 	foreach($ips as $ip) {
-		if(trim($ip) != "" and trim($ip) != "67.136.217.102") {
+		if(trim($ip) != "") {
 			echo "sudo iptables -A INPUT -s ".$ip." -j DROP\n";
 		}
 	}
